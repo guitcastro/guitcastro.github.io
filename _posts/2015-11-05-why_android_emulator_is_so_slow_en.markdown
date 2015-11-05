@@ -1,23 +1,27 @@
 ---
 layout: post
-title:  "Por que o emulador Android é tão lento? Emuladores vs Simuladores."
-date:   2015-11-05 17:00:00 -0200
-categories: jekyll update
+title:  "Why Android emulator is so slow? Emulators vs Simulators."
+date:   2015-11-05 17:01:00 -0200
+categories:
 ---
 
-Para desenvolver uma aplicação Android você precisa de um aparelho Android ou usar o emulador. O uso de aparelho reais é mais indicado, quando possível além de ser mais rápido eles fornecem uma sensação real de usar o aplicativo. Infelizmente nem sempre é possível fazer todos os testes usando aparelhos reais, na verdade inevitavelmente o uso de emuladores se torna necessário. Seja para testar uma versão específica do sistema operacional, dimensões específicas do aparelho ou até mesmo para executar testes de integração em cloud.  
-Ontem eu expliquei [como enviar SMS para o emulador](https://guitcastro.github.io/jekyll/update/2015/11/04/send_sms_android_emulator_pt.html), continuando minha séries posts sobre emuladores hoje eu vou explicar a diferença entre simuladores e emuladores e porque o emulador do Android é tão lento. 
+In order to develop an Android application you need a Android device or use the emulator. Using real device whenever possible is always indicated, besides being faster it gives to your a real experience.
+Unfortunately it not always possible to test on real devices, actually  inevitably the use o emulator are necessary. Either to test some specific version of the OS, specific dimensions of the device or to run integration test in the cloud.
+Yesterday I wrote about [how to send SMS to the emulator](https://guitcastro.github.io/jekyll/update/2015/11/04/send_sms_android_emulator_en.html), today I am going to explain the differences between an emulator and a simulator and why the Android emulator is so slow.
 
-Primeiramente é preciso entender porque o emulador é lento, quem já desenvolveu aplicativos para iOS sabe que elas são executadas com velocidade semelhante a de um aparelho real. Bom isso se dá porque o iOS usa um **simulador** e não um **emulador**.
+First we need to understand why the emulator is so slow, who already developed iOS applications knows that they are executed very smooth in the simulator. This is because when you develop iOS applications you use a **simulator** and not an **emulator**.
 
-Emuladores levam em conta detalhes internos da arquitetura e do hardware. Ou seja um emulador Android ARM executa instruções da mesma maneira que elas seriam executados em um hardware com processador ARM, mesmo que a máquina em que o código está sendo executado seja um processador x86. Esse processo de imitar as instruções pode ser muito demorado, pois apesar de algumas instruções serem similares, para fornecer uma emulação apurada é preciso também replicar elementos como tempo de acesso memória, clocking, interrupções e vários outros.   
-Emuladores tendem a fornecer uma experiência mais fiel do hardware em custo de performance. [Para emular um Super Nintento perfeitamente](http://www.tested.com/tech/gaming/2712-why-perfect-hardware-snes-emulation-requires-a-3ghz-cpu/) é necessário um CPU de 3Ghz, isto é 140 vezes mais rápido que o CPU do hardware original.
+Emulators mimic the and hardware environments found on actual devices. An ARM android Emulator mimic the ARM instructions as if they would have performed in an ARM CPU, even if the host machine has a x86 architecture.
+Beside some instructions are very similar, For an accurate emulation it's (usually) not enough to translate each instruction, it is necessary to handle memory accesses, timing, interrupts... and that's just for the CPU.  
+Emulators provide a more accurate experience in exchange of a poor performance. [To emulate a perfect SNES](http://www.tested.com/tech/gaming/2712-why-perfect-hardware-snes-emulation-requires-a-3ghz-cpu/) A 3GHz processor is need, 140 times more powerful than the chip inside the Super Nintendo.
 
-Por outro lado os simuladores só tentam fornecer uma experiência parecida em termos de software, sem se preocupar com detalhes da arquitetura interna do sistema. Desse modo eles tem acesso direto a elementos da máquina hospedeira como acesso a disco, memória e a velocidade da CPU. Por isso simuladores são muito mais rápido, mas isso também gera alguns empecilhos.   
-Por não ser a mesma arquitetura o códigos executados no simulador do iPhone não são os mesmo códigos que rodam no aparelho, desse modo você precisa compilar sua aplicação duas vezes. Se você estiver usando uma biblioteca é preciso ter certeza que ela possui compilação para arquitetura x86 e ARM para funcionar no simulador e emulador (felizmente isso é verdade para maioria delas).  
-Simuladores fornecem uma experiência menos apurada para o usuário, por exemplo o simulador iOS é *case sensitive* enquanto o aparelho não. Isto pode gerar bugs como por exemplo, ao tentar exibir uma imagem em que o nome do arquivo é em letras minúsculas, usando uma string que contém letras maiúsculas. A imagem vai funcionar corretamente no aparelho real, porém no simulador ela não vai ser carregada.
+Simulators, on the other hand, only mimic the software environment without concern about the underlay architecture. They otherwise have access to all of the host system's hardware resources such as disk space, memory and processor speed.
+This is why they are so much faster, but this also have a counterpoint. Because the iPhone simulator don't have the same architecture from iOS device, two version of the same application have to be compiled. 
+If you are using some third party library it have to be compile for both architectures, to run  the application in the simulator and in the device (fortunately this is true for most of them).
+Simulators provide a faster but less accurate experience. The iOS simulator is case sensitive, but the device its not. When trying to display an image from a file the image can be successful loaded on the device nut not on the emulator,
+according to the string used for the file name.
 
-Espero que vocês tenham entendido a diferença entre emuladores e simuladores e as vantagens e desvantagens de cada um deles. Nos meus próximos posts eu vou fornecer dicas para deixar o emuladore mais rápido.
+Hope you have understand the difference between emulators and simulators, and the advantages and disadvantages of each. In my next post I will write tips for speed up the Android Emulator.
 
 #Referências
 
