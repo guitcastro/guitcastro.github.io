@@ -15,9 +15,9 @@ Emuladores tendem a fornecer uma experiência mais fiel do hardware em custo de 
 
 Por outro lado os simuladores só tentam fornecer uma experiência parecida em termos de software, sem se preocupar com detalhes da arquitetura interna do sistema. Desse modo eles tem acesso direto a elementos da máquina hospedeira como acesso a disco, memória e a velocidade da CPU. Por isso simuladores são muito mais rápido, mas isso também gera alguns empecilhos.   
 Por não ser a mesma arquitetura o códigos executados no simulador do iPhone não são os mesmo códigos que rodam no aparelho, desse modo você precisa compilar sua aplicação duas vezes. Se você estiver usando uma biblioteca é preciso ter certeza que ela possui compilação para arquitetura x86 e ARM para funcionar no simulador e emulador (felizmente isso é verdade para maioria delas).  
-Simuladores fornecem uma experiência menos apurada para o usuário, por exemplo o simulador iOS é *case sensitive* enquanto o aparelho não. Isto pode ocorrer bugs como por exemplo, ao tentar exibir uma imagem em que o nome do arquivo é em letras minúsculas, usando uma string que contém letras maiúsculas. A imagem vai funcionar corretamente no aparelho real, porém no simulador ela não vai ser carregada.
+Simuladores fornecem uma experiência menos apurada para o usuário, por exemplo o simulador iOS é *case sensitive* enquanto o aparelho não. Isto pode gerar bugs como por exemplo, ao tentar exibir uma imagem em que o nome do arquivo é em letras minúsculas, usando uma string que contém letras maiúsculas. A imagem vai funcionar corretamente no aparelho real, porém no simulador ela não vai ser carregada.
 
-Espero que vocês tenham entendido a diferença entre emuladores e simuladores e as vantagens e desvantagens de cada um deles. Nos meus próximos posts eu vou fornecer dicas para deixar o emuladores mais rápidos.
+Espero que vocês tenham entendido a diferença entre emuladores e simuladores e as vantagens e desvantagens de cada um deles. Nos meus próximos posts eu vou fornecer dicas para deixar o emuladore mais rápido.
 
 #Referências
 
