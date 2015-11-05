@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to send SMS to Android Emulator"
-date:   2015-11-04 20:11:18 -0200
+date:   2015-11-04 20:13:18 -0200
 categories: jekyll update
 ---
 
