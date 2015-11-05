@@ -3,8 +3,8 @@ title: guitcastro
 email: guilherme.torres.castro@gmail
 description: >
     Hello! I'm Guilherme Torres Castro and I love to develop.
-    I create this blog to share some of my programming experience, 
-    hope it can help someone. I will try to write all my post in portuguese and in english.
+    I created this blog to share some of my programming experience, 
+    hope it can help someone. I will try to write all my post in Portuguese and in English.
     
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://guitcastro.github.io" # the base hostname & protocol for your site
